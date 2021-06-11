@@ -7,9 +7,9 @@
 function new_filename = filename_no_overwrite(filename)
     if isfile(filename)
         % split the text
-        text_split = strsplit(filename, '.');
-        filename_noext = strjoin(text_split(1:end-1), '.');
-        ext = text_split{end};
+        idx_last_period = max(strfind(filename, '.'));
+        filename_noext = extractBefore(filename, idx_last_period);
+        ext = extractAfter(filename, idx_last_period);
         
         % count number of repeated files + 1
         N = numel(dir(strcat(filename_noext, "*"))) + 1;

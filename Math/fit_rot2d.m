@@ -5,10 +5,11 @@
 %
 % Computes
 %   argmin fro(R * A - B)^2
-%     R                   
+%     R          
+%
 % Args:
 %   A: 2 x N points
-%   B: 2 x N ponits
+%   B: 2 x N points
 %
 % Return:
 %    - 2x2 Rotation matrix

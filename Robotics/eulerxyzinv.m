@@ -25,8 +25,8 @@ function EXYZinv = eulerxyzinv(R)
     
     
     
-    alpha = atan2(R(1,3),sqrt(R(2,3)^2 + R(3,3)^2));
-    beta = atan2(-R(2,3),R(3,3));
+    alpha = atan2(-R(2,3),R(3,3));
+    beta = atan2(R(1,3),sqrt(R(2,3)^2 + R(3,3)^2));
     gamma = atan2(-R(1,2),R(1,1));
     
     EXYZinv = [alpha; beta; gamma];

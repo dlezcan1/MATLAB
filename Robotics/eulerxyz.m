@@ -8,6 +8,6 @@ function EXYZ = eulerxyz(angles)
     alpha = angles(1);
     beta = angles(2);
     gamma = angles(3);
-    EXYZ = ROTX(alpha)*ROTY(beta)*ROTZ(gamma);
+    EXYZ = rotx(alpha)*roty(beta)*rotz(gamma);
 
 end

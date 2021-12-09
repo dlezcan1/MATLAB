@@ -11,6 +11,6 @@ function isavariable = isvariable(T, var)
         var string;
     end
     
-    isavariable = ismember(var, act_result_tbl.Properties.VariableNames);
+    isavariable = ismember(var, T.Properties.VariableNames);
     
 end

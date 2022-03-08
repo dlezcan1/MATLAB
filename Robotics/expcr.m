@@ -17,6 +17,6 @@ function expcr = expcr(x)
     theta = norm(x);
     
     %%implement rodrigues formula
-    expcr = I + sin(theta)*SKEW3(n) + (1 - cos(theta))*SKEW3(n)^2;
+    expcr = I + sin(theta)*skew3(n) + (1 - cos(theta))*skew3(n)^2;
     
 end

@@ -10,7 +10,7 @@ function Adg = adjoint(g)
 
 R = g(1:3,1:3);
 p = g(1:3,4);
-p_hat = SKEW3(p);
+p_hat = skew3(p);
 
 Adg = [R p_hat*R;
        zeros(3) R];

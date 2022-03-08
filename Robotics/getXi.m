@@ -18,7 +18,7 @@ function xi = getXi(g)
     % rotation and translation
     else
         w = 1/(2*sin(theta))*(vee(R-transpose(R)));
-        A = (eye(3)-EXPCR(w*theta))*SKEW3(w) + w*transpose(w)*theta;
+        A = (eye(3)-R)*skew3(w) + w*transpose(w)*theta;
         v = A\p;
         
     end

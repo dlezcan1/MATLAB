@@ -13,7 +13,7 @@ function exp_screw = screwexp(vect, theta)
         q = cross(w,v)/norm(w)^2;
         h = transpose(w)*v/norm(w)^2;
 
-        R = EXPCR(w);
+        R = expcr(w);
         p = (eye(3) - R)*q + h*w;
 
         exp_screw = [R p; 0 0 0 1];

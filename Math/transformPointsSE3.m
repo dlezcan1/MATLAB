@@ -53,7 +53,11 @@ function points_tf = transformPointsSE3(points, varargin)
     end
     
     %% Transform the points
-    points_h = [points; ones(1, size(points,2))];
+    if size(points, 1) == 3
+        points_h = [points; ones(1, size(points,2))];
+    else
+        points_h = points;
+    end
     
     points_tf_h = F * points_h;
     points_tf = points_tf_h(1:end-1,:);
